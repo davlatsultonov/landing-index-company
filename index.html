@@ -66,29 +66,31 @@
 </div>
 
 <div class="modal-view">
-    <h1>Заказать звонок</h1>
+    <div class="container">
+        <h1>Заказать звонок</h1>
 
-    <div class="modal-view-close js-feedback-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 18">
-            <path fill="none" stroke="#d9d7d7" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-miterlimit="20" stroke-width="1.5" d="M1 1l16 16"></path>
-            <path fill="none" stroke="#d9d7d7" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-miterlimit="20" stroke-width="1.5" d="M17 1L1 17"></path>
-        </svg>
+        <div class="modal-view-close js-feedback-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 18">
+                <path fill="none" stroke="#d9d7d7" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-miterlimit="20" stroke-width="1.5" d="M1 1l16 16"></path>
+                <path fill="none" stroke="#d9d7d7" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-miterlimit="20" stroke-width="1.5" d="M17 1L1 17"></path>
+            </svg>
+        </div>
+
+        <form class="form modal-view__form js-zayavka">
+            <input type="tel" name="phone" autocomplete="on" class="input phone-mask"
+                   placeholder="Ваш телефон*">
+
+            <button class="btn">
+                Отправить заявку
+            </button>
+
+            <a href="javascript:void(0)" class="form__btn-close js-feedback-toggle">
+                Закрыть
+            </a>
+        </form>
     </div>
-
-    <form class="form modal-view__form js-zayavka">
-        <input type="tel" name="phone" autocomplete="on" class="input phone-mask"
-               placeholder="Ваш телефон">
-
-        <button class="btn">
-            Заказать звонок
-        </button>
-
-        <a href="javascript:void(0)" class="form__btn-close js-feedback-toggle">
-            Закрыть
-        </a>
-    </form>
 </div>
 
 <script src="js/jquery-3.3.1.min.js"></script>

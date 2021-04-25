@@ -14,9 +14,32 @@ $(function () {
     $('.js-feedback-toggle').click(function (e) {
         e.preventDefault();
 
-        $('.modal-view').toggleClass('modal-view--open');
-        $('.wrapper').toggleClass('modal-view--open');
-    })
+        if (!$('.modal-view, .wrapper').hasClass('modal-view--open')) {
+            $('.modal-view').addClass('modal-view--open');
+            $('.wrapper').addClass('modal-view--open');
+            disableScrollInActiveModal();
+        } else {
+            $('.modal-view').removeClass('modal-view--open');
+            $('.wrapper').removeClass('modal-view--open');
+            enableScrollInActiveModal();
+        }
+
+    });
+
+    function disableScrollInActiveModal() {
+        let body = document.body,
+            windowScrollY = window.scrollY;
+        body.style.position = 'fixed';
+        body.style.top = `-${windowScrollY}px`;
+    }
+
+    function enableScrollInActiveModal() {
+        let body = document.body,
+            scrollY = body.style.top;
+        body.style.position = '';
+        body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
 
     let isValidMask = false;
 

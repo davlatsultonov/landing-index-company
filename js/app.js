@@ -1,4 +1,16 @@
 $(function () {
+    const formTabBtns = $('.form-tab-btn');
+
+    $('.form-tab-btn').on('click', function () {
+        const buttonName = $(this).data('buttonName'),
+              formInput = $(this).closest('.form').find('.form__bottom').find('.input');
+
+        formInput.css('border-top-left-radius', $(this).hasClass('whatsapp') ? 0 : 4);
+        formTabBtns.removeClass('active');
+        $(this).addClass('active');
+        formInput.attr('name', buttonName);
+    });
+
     $('.js-feedback-toggle').click(function (e) {
         e.preventDefault();
 

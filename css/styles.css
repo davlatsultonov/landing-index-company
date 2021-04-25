@@ -1,0 +1,12 @@
+:root {
+    --main-color: #1fbe86;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open-Sans', sans-serif;
+    line-height: 1.5;
+}

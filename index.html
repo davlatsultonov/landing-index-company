@@ -49,8 +49,12 @@
                     <button data-button-name="phone" class="form-tab-btn phone"></button>
                 </div>
                 <div class="form__bottom">
-                    <input type="tel" name="phone" autocomplete="on" class="input phone-mask"
-                           placeholder="Введите ваш номер*">
+                    <div class="form__input-field error">
+                        <input type="tel" name="phone" autocomplete="on" class="input phone-mask"
+                               placeholder="Введите ваш номер*">
+                        <span class="error_alert">некорректный телефон</span>
+                    </div>
+
 
                     <button class="btn">
                         Оставить заявку
@@ -79,8 +83,11 @@
         </div>
 
         <form class="form modal-view__form js-zayavka">
-            <input type="tel" name="phone" autocomplete="on" class="input phone-mask"
-                   placeholder="Ваш телефон*">
+            <div class="form__input-field error">
+                <input type="tel" name="phone" autocomplete="on" class="input phone-mask"
+                       placeholder="Ваш телефон*">
+                <span class="error_alert">некорректный телефон</span>
+            </div>
 
             <button class="btn">
                 Отправить заявку

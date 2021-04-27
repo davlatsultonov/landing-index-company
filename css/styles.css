@@ -18,7 +18,8 @@ p {
 
 .container {
     min-width: 290px;
-    max-width: 480px;
+    width: 100%;
+    max-width: 425px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -175,6 +176,18 @@ p {
     color: #d7dbda;
     font-size: 16px;
     line-height: 24px;
+}
+
+.form .input:-moz-placeholder {
+    color: #d7dbda;
+    font-size: 16px;
+    line-height: 52px;
+}
+
+.form .input::-moz-placeholder {
+    color: #d7dbda;
+    font-size: 16px;
+    line-height: 52px;
 }
 
 .form .input::-ms-input-placeholder {
@@ -382,6 +395,14 @@ p {
     color: #a0a7a5;
 }
 
+.modal-view__form .input:-moz-placeholder {
+    color: #a0a7a5;
+}
+
+.modal-view__form .input::-moz-placeholder {
+    color: #a0a7a5;
+}
+
 .modal-view__form .input::-ms-input-placeholder {
     color: #a0a7a5;
 }
@@ -397,7 +418,6 @@ p {
 /* success block */
 
 .success-block {
-    max-width: 480px;
     margin: 200px auto;
     color: #282a29;
     padding-left: 68px;

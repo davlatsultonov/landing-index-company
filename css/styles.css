@@ -40,6 +40,14 @@ p {
     background-size: cover;
     margin: auto;
     position: relative;
+    width: 100%;
+    max-width: 425px;
+}
+
+@media (min-width: 426px) {
+    .container, .content {
+        max-width: 360px;
+    }
 }
 
 .content__inner {
